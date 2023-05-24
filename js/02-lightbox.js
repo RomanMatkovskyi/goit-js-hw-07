@@ -20,5 +20,12 @@ galleryItems.forEach((item) => {
   galeryContainer.appendChild(galleryEl);
 });
 ulEl.appendChild(galeryContainer);
+let captionsData = "new caption";
+let lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: "250",
+});
 
-let lightbox = new SimpleLightbox(".gallery a", {});
+ulEl.addEventListener("click", (event) => {
+  event.preventDefault();
+});
